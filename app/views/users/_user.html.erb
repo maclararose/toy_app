@@ -11,7 +11,11 @@
 
   <p>
     <strong>Content:</strong>
-    <%= user.micropost.first.content %>
+    <% if user.micropost.present? %>
+      <%= user.micropost.first.content %>
+    <% else %>
+      No content
+    <% end %>
   </p>
 
 </div>
